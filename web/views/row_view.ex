@@ -11,6 +11,7 @@ defmodule Dashboard.RowView do
 
   def render("row.json", %{row: row}) do
     %{id: row.id,
-      table_id: row.table_id}
+      table_id: row.table_id,
+      data: row.data}
   end
 end

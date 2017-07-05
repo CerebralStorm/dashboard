@@ -4,6 +4,7 @@ defmodule Dashboard.Repo.Migrations.CreateRow do
   def change do
     create table(:rows) do
       add :table_id, :integer
+      add :data, :map
 
       timestamps()
     end

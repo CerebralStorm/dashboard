@@ -4,7 +4,7 @@ defmodule Dashboard.TableController do
   alias Dashboard.Table
 
   def index(conn, _params) do
-    tables = Repo.all(Table) |> Repo.preload([:columns])
+    tables = Repo.all(Table) |> Repo.preload([:rows])
     render(conn, "index.json", tables: tables)
   end
 

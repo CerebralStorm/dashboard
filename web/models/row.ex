@@ -3,6 +3,7 @@ defmodule Dashboard.Row do
 
   schema "rows" do
     field :table_id, :integer
+    field :data, :map
 
     timestamps()
   end
@@ -12,7 +13,7 @@ defmodule Dashboard.Row do
   """
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast(params, [:table_id])
-    |> validate_required([:table_id])
+    |> cast(params, [:table_id, :data])
+    |> validate_required([:table_id, :data])
   end
 end
