@@ -1,0 +1,23 @@
+<h2>Show column</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @column.name %>
+  </li>
+
+  <li>
+    <strong>Position:</strong>
+    <%= @column.position %>
+  </li>
+
+  <li>
+    <strong>Table:</strong>
+    <%= @column.table_id %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: column_path(@conn, :edit, @column) %>
+<%= link "Back", to: column_path(@conn, :index) %>

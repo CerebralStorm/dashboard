@@ -1,0 +1,30 @@
+<h2>Listing columns</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Position</th>
+      <th>Table</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for column <- @columns do %>
+    <tr>
+      <td><%= column.name %></td>
+      <td><%= column.position %></td>
+      <td><%= column.table_id %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: column_path(@conn, :show, column), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: column_path(@conn, :edit, column), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: column_path(@conn, :delete, column), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New column", to: column_path(@conn, :new) %>
