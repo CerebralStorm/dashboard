@@ -19,6 +19,8 @@ defmodule Dashboard.Router do
     get "/", TableController, :index
     resources "/tables", TableController
     resources "/columns", ColumnController
+    resources "/rows", RowController, except: [:new, :edit]
+    resources "/cells", CellController, except: [:new, :edit]
   end
 
   # Other scopes may use custom stacks.
