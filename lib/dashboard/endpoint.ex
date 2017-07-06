@@ -38,5 +38,7 @@ defmodule Dashboard.Endpoint do
     key: "_dashboard_key",
     signing_salt: "BXOVaiYc"
 
+  plug CORSPlug
+
   plug Dashboard.Router
 end

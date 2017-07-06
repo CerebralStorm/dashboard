@@ -2,7 +2,7 @@ defmodule Dashboard.Row do
   use Dashboard.Web, :model
 
   schema "rows" do
-    field :table_id, :integer
+    belongs_to :table, Dashboard.Table
     field :data, :map
 
     timestamps()

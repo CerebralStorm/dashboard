@@ -25,5 +25,6 @@ defmodule Dashboard.Router do
 
     resources "/tables", TableController, except: [:new, :edit]
     resources "/rows", RowController, except: [:new, :edit]
+    resources "/columns", ColumnController, except: [:new, :edit]
   end
 end

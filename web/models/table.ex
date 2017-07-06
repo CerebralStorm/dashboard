@@ -3,6 +3,7 @@ defmodule Dashboard.Table do
 
   schema "tables" do
     field :name, :string
+    has_many :columns, Dashboard.Column
     has_many :rows, Dashboard.Row
 
     timestamps()
